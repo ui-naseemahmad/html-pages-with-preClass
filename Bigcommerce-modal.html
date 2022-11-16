@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Bigcommerce</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+      * {
+        font-family: "Inter", sans-serif;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .pre-main ::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        color: #8c9098;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .pre-main input:focus {
+        box-shadow: 0 0 0 1px rgb(23, 92, 211);
+        border-color: rgb(23, 92, 211) !important;
+      }
+      .pre-main input:focus-visible {
+        outline: unset;
+      }
+      .pre-main {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f5f6f6;
+    }
+
+      .pre-container {
+        width: 100%;
+        max-width: 460px;
+        box-shadow: 0px 8px 12px rgb(0 0 0 / 10%);
+        margin: 0 auto;
+        border-radius: 6px;
+        background: #fff;
+      }
+
+      .pre-header__item--left {
+        display: flex;
+        align-items: center;
+      }
+
+      .pre-header__item--left h1 {
+        padding-left: 10px;
+      }
+
+      .pre-container h1 {
+        font-size: 14px;
+        line-height: 17px;
+        font-weight: 600;
+        color: #1c2433;
+      }
+      .pre-connection-tile {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+        color: #1c2433;
+      }
+      .pre-connectForm {
+        padding: 16px;
+      }
+
+      .pre-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 16px;
+        border-bottom: 1px solid #d7d9db;
+      }
+
+      .pre-connectForm label {
+        padding: 16px 0 8px;
+        display: inline-block;
+        font-size: 14px;
+        line-height: 20px;
+        color: #1c2433;
+      }
+
+      .pre-connectForm input {
+        display: block;
+        padding: 12px 16px;
+        border: 1px solid #c3c5c9;
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      .pre-close-icon,
+      .pre-footer button {
+        cursor: pointer;
+      }
+
+      .pre-required-sign {
+        color: #d62c20;
+      }
+
+      .pre-learn-more-title {
+        padding: 0 16px 16px;
+        font-size: 14px;
+        color: #616771;
+        line-height: 20px;
+        border-bottom: 1px solid #d7d9db;
+      }
+
+      .pre-learn-more-title a {
+        text-decoration: none;
+        color: #2e90fa;
+      }
+
+      .pre-footer {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 12px 16px;
+      }
+
+      .pre-footer button {
+        padding: 9px 12px;
+        border-radius: 4px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+
+      .pre-cancel-btn {
+        margin-right: 12px;
+        display: inline-block;
+        background: #fafafb;
+        border: 1px solid #c3c5c9;
+      }
+
+      .pre-connect-btn {
+        background: #413bbc;
+        color: #fff;
+        font-weight: 500;
+        border: 1px solid #413bbc;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="pre-main">
+    <div class="pre-container">
+      <div class="pre-header">
+        <div class="pre-header__item--left">
+          <span class="pre-logo">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+            >
+              <g clip-path="url(#clip0_2066_1775)">
+                <rect width="24" height="24" rx="12" fill="white" />
+                <rect
+                  x="0.5"
+                  y="0.5"
+                  width="23"
+                  height="23"
+                  rx="11.5"
+                  fill="url(#pattern0)"
+                  stroke="black"
+                />
+              </g>
+              <defs>
+                <pattern
+                  id="pattern0"
+                  patternContentUnits="objectBoundingBox"
+                  width="1"
+                  height="1"
+                >
+                  <use
+                    xlink:href="#image0_2066_1775"
+                    transform="scale(0.00444444)"
+                  />
+                </pattern>
+                <clipPath id="clip0_2066_1775">
+                  <rect width="24" height="24" rx="12" fill="white" />
+                </clipPath>
+                <image
+                  id="image0_2066_1775"
+                  width="225"
+                  height="225"
+                  xlink:href="data:image/png;base64,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"
+                />
+              </defs>
+            </svg>
+          </span>
+          <h1>Connect Bigcommerce</h1>
+        </div>
+        <div class="pre-header__item--right">
+          <span class="pre-close-icon">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M15 5L5 15"
+                stroke="#3B424F"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5 5L15 15"
+                stroke="#3B424F"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </div>
+      </div>
+      <form action="">
+        <div class="pre-connectForm">
+          <h2 class="pre-connection-tile">Connection Credentials</h2>
+
+          <label for="">StoreHash <span class="pre-required-sign">*</span></label>
+          <input
+            type="text"
+            name=""
+            value=""
+            placeholder="Enter your store url"
+          />
+          <label for=""
+            >Access Token <span class="pre-required-sign">*</span></label
+          >
+          <input
+            type="text"
+            name=""
+            value=""
+            placeholder="Enter your access token"
+          />
+          <label for="">Client ID <span class="pre-required-sign">*</span></label>
+          <input
+            type="text"
+            name=""
+            value=""
+            placeholder="Enter your client id"
+          />
+          <label for=""
+            >Client Secret <span class="pre-required-sign">*</span></label
+          >
+          <input
+            type="text"
+            name=""
+            value=""
+            placeholder="Enter your Client Secret"
+          />
+        </div>
+        <p class="pre-learn-more-title">
+          <a href="#" title="connect">Learn more</a> about connecting
+          Bigcommerce
+        </p>
+        <div class="pre-footer">
+          <button type="button" class="pre-cancel-btn">Cancel</button>
+          <button type="button" class="pre-connect-btn">Connect</button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </body>
+</html>
